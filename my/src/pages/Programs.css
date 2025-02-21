@@ -1,0 +1,39 @@
+/* src/pages/Programs.css */
+.programs {
+    position: relative;
+    background-color: #2a2a72;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    z-index: 1;
+  }
+  
+  .programs-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .program-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  
+  .program {
+    background: rgba(0, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  
+  .program h2 {
+    font-size: 1.8rem;
+  }
+  
+  .program p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  

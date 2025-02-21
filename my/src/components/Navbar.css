@@ -1,0 +1,114 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: transparent; /* Transparent background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds depth */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensures the navbar stays on top */
+  }
+  
+  .navbar-logo h1 {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    margin: 0;
+  }
+  
+  /* Navbar Links Container */
+  .navbar-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%; /* Adjust as needed */
+    gap: 30px;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+  }
+  
+  .navbar-links a:hover {
+    color: #00ffff; /* Glowing effect */
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
+  /* Add a bottom border to indicate hover */
+  .navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #00ffff;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s, left 0.3s;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Hamburger Menu (for mobile) */
+  .navbar-menu-icon {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    z-index: 100;
+  }
+  
+  @media (max-width: 768px) {
+    /* For Mobile View */
+    .navbar-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #24243e; /* Dark background for mobile menu */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+  
+    .navbar-links.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .navbar-links li {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  
+    .navbar-menu-icon {
+      display: block;
+    }
+  
+    .navbar-logo h1 {
+      font-size: 2rem;
+    }
+  }
+  

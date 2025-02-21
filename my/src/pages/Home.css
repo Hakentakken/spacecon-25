@@ -1,0 +1,125 @@
+/* src/pages/Home.css */
+.home {
+    position: relative;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    z-index: 1;
+  }
+  
+  .home-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .home h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+  
+  .home p {
+    font-size: 1.5rem;
+    margin: 20px;
+  }
+  
+  .home button {
+    background-color: #00ffff;
+    border: none;
+    padding: 15px 30px;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .home button:hover {
+    background-color: #00b3b3;
+    color: white;
+  }
+/* New box styling for the image and description */
+.image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);  /* Transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Dark shadow for contrast */
+    margin-top: 20px;
+    padding: 20px;
+    backdrop-filter: blur(5px); /* Blur effect for background */
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    z-index: 2;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover Effect for the Box */
+  .image-box:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Glowing shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    background: rgba(0, 0, 0, 0.7); /* Darker background for hover */
+  }
+  
+  /* Image container */
+  .image-container {
+    width: 100%;
+    height: 250px; /* Control the height of the image container */
+    overflow: hidden;
+    border-radius: 10px; /* Round corners */
+    margin-bottom: 15px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits within the container */
+  }
+  
+  /* Description styling */
+  .image-description {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .image-description h2 {
+    font-size: 1.5rem;
+    color: #00ffff; /* Glowing effect */
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for title */
+  .image-box:hover .image-description h2 {
+    color: #ff00ff; /* Change to another glowing color when hovered */
+  }
+  
+  .image-description p {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+    color: #d0d0d0; /* Light grey color for text */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .image-box {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .image-container {
+      height: 200px; /* Adjust image container height on small screens */
+    }
+  
+    .image-description h2 {
+      font-size: 1.2rem;
+    }
+  
+    .image-description p {
+      font-size: 0.9rem;
+    }
+  }

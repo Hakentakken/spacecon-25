@@ -1,0 +1,60 @@
+/* src/pages/Membership.css */
+.membership {
+    position: relative;
+    background: url('https://example.com/space-gym.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    z-index: 1;
+  }
+  
+  .membership-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .membership h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .membership .plans {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  
+  .plan {
+    background: rgba(0, 255, 255, 0.3);
+    padding: 25px;
+    width: 250px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  }
+  
+  .plan h2 {
+    font-size: 2rem;
+  }
+  
+  .plan p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  .membership button {
+    background-color: #00ffff;
+    border: none;
+    padding: 15px 30px;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .membership button:hover {
+    background-color: #00b3b3;
+    color: white;
+  }
+  

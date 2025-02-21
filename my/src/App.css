@@ -1,38 +1,66 @@
-.App {
+/* App.css */
+
+/* Ensures the navbar stays fixed and content is below */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background-color: #000; /* Black background to match space theme */
+}
+
+/* Content container to hold the pages */
+.content-container {
+  display: flex; /* Flexbox for horizontal alignment */
+  justify-content: space-around; /* Space pages evenly */
+  align-items: flex-start;
+  padding-top: 60px; /* To avoid overlap with navbar */
+  min-height: 100vh; /* Ensures full height */
+}
+
+/* Individual pages can have this to ensure proper width */
+.page {
+  width: 30%; /* Adjust as needed */
+  padding: 20px;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar should be above the particles and fixed at the top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* Make navbar background transparent */
+  z-index: 100;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Styling for navbar items */
+.navbar a {
   color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a:hover {
+  color: #00ffff;
+  text-decoration: underline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column; /* Stack pages vertically */
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .page {
+    width: 90%; /* Full width for smaller screens */
+    margin-bottom: 20px;
   }
 }
